@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+}
+
+.todos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: dense; /* This allows the grid to fill gaps */
+  gap: 1.5rem;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px; /* Adjust based on your content */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.todo .text {
+  overflow-wrap: break-word; /* Ensure text wraps inside the card */
+}
+
+.addToDo, .todos {
+  margin-bottom: 1.5rem; /* Adjust margin as needed */
+}
+
+.undo-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  width: calc(100% - 2rem); /* Ensure it doesn't overflow */
+  max-width: 400px; /* Adjust as needed */
+}
